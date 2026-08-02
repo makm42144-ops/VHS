@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex Vitality — wholesale supply to pharmacies worldwide</title>
+<meta name="description" content="Wholesale supply of prescription medicines to pharmacies worldwide, licensed wholesalers and research institutions. Price list and trade accounts.">
+<link rel="canonical" href="https://apexvitality.com.au/">
+<meta name="theme-color" content="#faf6f2">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Apex Vitality">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Apex Vitality — wholesale supply to pharmacies worldwide">
+<meta property="og:description" content="Wholesale supply of prescription medicines to pharmacies worldwide, licensed wholesalers and research institutions.">
+<meta property="og:url" content="https://apexvitality.com.au/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Apex Vitality — wholesale supply to pharmacies worldwide">
+<meta name="twitter:description" content="Wholesale supply of prescription medicines to pharmacies worldwide, licensed wholesalers and research institutions.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 108'%3E%3Crect width='120' height='108' fill='%23faf6f2'/%3E%3Cpath fill='%238f2f31' d='M60 2 L117 104 L92 104 L60 46 L28 104 L3 104 Z'/%3E%3Cpath fill='%238f2f31' d='M60 40 L86 104 L74 104 L60 72 L52 90 Z'/%3E%3Cpath fill='%23f08a63' d='M23 104 C23 72 39 43 71 24 C56 48 50 76 48 104 Z'/%3E%3C/svg%3E">
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  WHOLESALE SUPPLY SITE — READ BEFORE EDITING ANY COPY
+
+  This is a single combined page: wholesale positioning, a public price list,
+  and a trade account application. There is no consumer storefront and no
+  supplement range; the previous versions are in /archive.
+
+  WHY THE PRICE LIST IS ALLOWED TO EXIST
+
+  Prescription-only (Schedule 4) medicines cannot normally be advertised to
+  the public. The Therapeutic Goods Advertising Code carves out one exception:
+  they MAY be advertised in the form of a PRICE LIST. That is the only reason
+  these product names appear here. Break a condition and you do not get a
+  slightly non-compliant page — you lose the exemption and the page becomes a
+  prohibited advertisement.
+
+  CONDITIONS THE PRICE LIST MUST KEEP
+
+  1.  Price information ONLY. No indications, no claims, no descriptions, no
+      "what it's for", no comparisons between lines.
+  2.  NO IMAGES. Not of product, not of packaging, not a stock pill photo.
+      An image is content beyond price information.
+  3.  Nothing that steers a reader toward one line over another — no badges,
+      ratings, "popular", highlighting, sort-by-price or filter controls.
+  4.  ARTG-registered goods only. Registration is a condition of INCLUSION;
+      printing the ARTG number is not required, which is why the column was
+      removed. Keep the registration evidence on file internally.
+  5.  Name, strength, dosage form and quantity on every line.
+  6.  Alphabetical by active ingredient.
+  7.  Uniform font and uniform presentation. Nothing emphasised.
+  8.  NO non-therapeutic goods in the list. This is why supplements were
+      removed rather than merged into the table — mixing them in forfeits the
+      exemption. If the supplement range ever returns it needs its own page,
+      never this table.
+  9.  No medicines that CAN be advertised to consumers (S2, unscheduled).
+  10. NO ADD-TO-CART and no online purchase. The exemption governs
+      ADVERTISING, not supply.
+
+  ON SUPPLY
+
+  Supply here is wholesale, to verified trade accounts only. A pharmacy
+  buying stock from a wholesaler does not need a prescription — the
+  prescription requirement applies when the pharmacy dispenses to a patient.
+  That is why there is no "send your script" step.
+
+  The corollary is that the site must never imply a member of the public can
+  buy from it. The supply statement in the price list section carries that
+  weight; do not soften or remove it.
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+</noscript>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════════
+   Design tokens — the only place a colour or size is defined.
+
+   One value departs from the original brief: --clay. The specified #8a7a72
+   measures 3.82:1 on linen, which fails WCAG AA for text, and clay carries
+   captions and metadata. Darkened to #756660 (5.10:1). The brief's value
+   survives as --clay-soft for non-text UI boundaries, where the bar is 3:1.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --brick: #7c2e28;        /* 8.57:1 on linen  */
+  --brick-deep: #5c1f1b;   /* 11.72:1 on linen */
+  --apricot: #f0ae88;      /* SURFACE ONLY — 1.76:1 on linen, never text */
+  --apricot-tint: #f7d9c8; /* 6.90:1 on brick — secondary text in the band */
+  --linen: #faf6f2;
+  --ink: #1e1512;          /* 16.67:1 on linen */
+  --clay: #756660;         /* 5.10:1 on linen  */
+  --clay-soft: #8a7a72;    /* 3.82:1 — UI boundaries only */
+  --shell: #ffffff;
+  --hairline: #e3d5cb;
+
+  --display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --micro: 0.8125rem; --small: 0.9375rem; --body: 1.0625rem;
+  --lead: 1.3125rem; --h3: 1.75rem; --h2: 2.5rem; --h1: 3.5rem;
+
+  --radius: 4px;
+  --ease-rise: cubic-bezier(0.16, 1, 0.3, 1);
+  --measure: 41rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background: var(--linen); color: var(--ink); font-family: var(--sans);
+  font-size: var(--body); line-height: 1.65; overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 600; text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font: inherit; }
+
+:focus-visible { outline: 2px solid var(--brick-deep); outline-offset: 2px; border-radius: 2px; }
+.on-brick :focus-visible { outline-color: var(--apricot); }
+::selection { background: var(--apricot); color: var(--ink); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip:focus {
+  position: fixed; top: 12px; left: 12px; z-index: 60; width: auto; height: auto;
+  clip: auto; margin: 0; padding: 10px 16px; background: var(--brick);
+  color: var(--shell); font-size: var(--small); font-weight: 600;
+  border-radius: var(--radius); text-decoration: none;
+}
+
+/* ── The editorial grid ─────────────────────────────────────────────────────
+   Content in columns 1–7, metadata rail in 9–12. Below 900px the grid
+   collapses and source order decides what reads first — chosen per section in
+   the markup, never with CSS `order`, which would move things visually while
+   leaving screen readers on the DOM sequence. */
+.shell-x { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: 1.25rem; }
+@media (min-width: 48rem) { .shell-x { padding-inline: 2.5rem; } }
+
+.editorial { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; }
+@media (min-width: 56.25rem) {
+  .editorial { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 2rem; }
+  .editorial-body { grid-column: 1 / span 7; }
+  .editorial-wide { grid-column: 1 / span 12; }
+  .rail { grid-column: 9 / span 4; grid-row: 1; align-self: start; position: sticky; top: 7rem; }
+}
+.rail {
+  font-size: var(--micro); line-height: 1.45; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--clay);
+}
+.rail p { margin-bottom: 0.75rem; }
+.rail p:last-child { margin-bottom: 0; }
+.rail .plain { text-transform: none; letter-spacing: normal; }
+.rail-index { font-family: var(--display); font-weight: 600; color: var(--brick); margin-bottom: 1rem; }
+.rail-index span { color: var(--clay); }
+
+.section-y { padding-block: 4.5rem; }
+@media (min-width: 48rem) { .section-y { padding-block: 7rem; } }
+.section-rule { border-top: 2px solid var(--brick); }
+.measure { max-width: var(--measure); }
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.site-header {
+  position: sticky; top: 0; z-index: 40;
+  background: rgb(250 246 242 / 0.95); backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--hairline);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 4rem; }
+@media (min-width: 48rem) { .header-inner { height: 5rem; } }
+/* ── Logo lockup ────────────────────────────────────────────────────────────
+   Mark redrawn as inline SVG so the page stays a single file with no asset
+   requests. To use the original artwork instead, drop logo.svg beside this
+   file and replace the <svg> block in the header with:
+       <img src="logo.svg" alt="" width="34" height="30" class="mark">
+   Keep alt="" — the adjacent text already names the brand, so alt text on the
+   mark would make a screen reader announce it twice. */
+.wordmark {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--display); font-size: var(--body); font-weight: 600;
+  letter-spacing: -0.01em; text-decoration: none;
+}
+.wordmark b { color: var(--brick); font-weight: 600; }
+.mark { display: block; width: 1.9rem; height: auto; flex: none; }
+.wordmark-lg { font-size: var(--lead); gap: 0.625rem; }
+.wordmark-lg .mark { width: 2.4rem; }
+.nav-desktop { display: none; align-items: center; gap: 1.75rem; }
+@media (min-width: 56.25rem) { .nav-desktop { display: flex; } }
+.nav-desktop a { font-size: var(--small); text-decoration: none; }
+.nav-desktop a:hover { color: var(--brick); }
+
+.btn {
+  display: inline-block; background: var(--brick); color: var(--shell);
+  font-family: var(--sans); font-size: var(--small); font-weight: 600;
+  padding: 0.75rem 1.25rem; border-radius: var(--radius);
+  text-decoration: none; border: 0; cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.btn:hover { background: var(--brick-deep); }
+.btn-header { display: none; }
+@media (min-width: 40rem) { .btn-header { display: inline-block; } }
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+h1 { max-width: 14ch; font-weight: 700; font-size: var(--h2); line-height: 1.08; letter-spacing: -0.02em; }
+@media (min-width: 40rem) { h1 { font-size: var(--h1); line-height: 1; } }
+h2 { font-size: var(--h3); line-height: 1.2; letter-spacing: -0.01em; max-width: 18ch; }
+@media (min-width: 40rem) { h2 { font-size: var(--h2); line-height: 1.08; letter-spacing: -0.02em; } }
+.hero-sub { margin-top: 1.5rem; font-size: var(--lead); line-height: 1.5; color: var(--clay); }
+.section-intro { margin-top: 1.25rem; max-width: var(--measure); color: var(--clay); }
+.body-note { margin-top: 1.5rem; max-width: var(--measure); color: var(--clay); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+/* ── The supply notice ──────────────────────────────────────────────────────
+   Not decoration. The trade-only statement is what keeps the public price
+   list from reading as an offer to the public. Do not remove it. */
+.notice {
+  margin-top: 1.5rem; max-width: 52rem; background: var(--shell);
+  border: 1px solid var(--hairline); border-left: 3px solid var(--brick);
+  border-radius: var(--radius); padding: 1.25rem 1.5rem;
+}
+.notice p { font-size: var(--small); color: var(--clay); }
+.notice p + p { margin-top: 0.75rem; }
+.notice strong { color: var(--ink); font-weight: 600; }
+
+/* ── The price list ─────────────────────────────────────────────────────────
+   Uniform font, uniform size, uniform weight. Only the column headers differ,
+   and only by weight. No row is tinted, badged, emphasised or reordered. Any
+   styling that draws the eye to one line over another risks the exemption. */
+.list-wrap { margin-top: 2.5rem; overflow-x: auto; }
+table {
+  width: 100%; min-width: 38rem; border-collapse: collapse;
+  font-family: var(--sans); font-size: var(--small); font-weight: 400;
+  background: var(--shell);
+}
+caption {
+  caption-side: top; text-align: left; padding-bottom: 0.75rem;
+  font-size: var(--micro); letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--clay);
+}
+th, td {
+  padding: 0.875rem 1rem; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--hairline);
+}
+thead th {
+  font-weight: 600; font-size: var(--micro); letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--clay);
+  border-bottom: 2px solid var(--brick); background: var(--linen);
+}
+tbody th { font-weight: 400; }
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tbc {
+  display: inline-block; padding: 1px 6px; border: 1px dashed var(--clay-soft);
+  border-radius: 2px; font-size: var(--micro); color: var(--clay);
+}
+
+/* ── Requirements list ──────────────────────────────────────────────────── */
+/* Therapeutic areas. Presented as a flat, unordered set on purpose — no
+   emphasis, no ordering that could imply a mapping onto the price list. */
+.areas {
+  display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 2.5rem;
+}
+.areas li {
+  background: var(--apricot); color: var(--ink);
+  border-radius: var(--radius); padding: 0.5rem 0.875rem;
+  font-size: var(--small); font-weight: 600;
+}
+
+.reqs { margin-top: 2.5rem; border-top: 1px solid var(--hairline); }
+.reqs > div { padding-block: 1.25rem; border-bottom: 1px solid var(--hairline); }
+.reqs dt { font-family: var(--display); font-size: var(--lead); font-weight: 600; letter-spacing: -0.01em; }
+.reqs dd { margin-top: 0.375rem; max-width: var(--measure); font-size: var(--small); color: var(--clay); }
+
+/* ── Application form ───────────────────────────────────────────────────── */
+.form-card {
+  margin-top: 2.5rem; max-width: 34rem; background: var(--shell);
+  border: 1px solid var(--hairline); border-radius: var(--radius); padding: 1.5rem;
+}
+@media (min-width: 40rem) { .form-card { padding: 2rem; } }
+.field { margin-bottom: 1.25rem; }
+.field label { display: block; font-size: var(--small); font-weight: 600; }
+.field .help { margin-top: 0.25rem; font-size: var(--micro); color: var(--clay); }
+.field input {
+  width: 100%; margin-top: 0.5rem; min-height: 3rem; padding: 0.625rem 0.875rem;
+  background: var(--linen); border: 1px solid var(--clay-soft);
+  border-radius: var(--radius); font-family: var(--sans); font-size: var(--body);
+  color: var(--ink);
+}
+.field textarea::placeholder { color: var(--clay); opacity: 1; }
+.field textarea {
+  width: 100%; margin-top: 0.5rem; padding: 0.625rem 0.875rem;
+  background: var(--linen); border: 1px solid var(--clay-soft);
+  border-radius: var(--radius); font-family: var(--sans); font-size: var(--body);
+  line-height: 1.55; color: var(--ink); resize: vertical; min-height: 6rem;
+}
+.field input[aria-invalid="true"] { border-color: var(--brick); border-width: 2px; }
+.field .err { margin-top: 0.375rem; font-size: var(--small); color: var(--brick); }
+.form-card .btn { width: 100%; text-align: center; padding-block: 0.875rem; font-size: var(--body); }
+.form-card .privacy { margin-top: 1rem; font-size: var(--micro); color: var(--clay); }
+.form-status { margin-top: 1rem; font-size: var(--small); }
+.form-status[data-state="ok"] { color: var(--ink); }
+.form-status[data-state="error"] { color: var(--brick); }
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.site-footer { background: var(--shell); border-top: 1px solid var(--hairline); }
+.legal dl { display: grid; gap: 1rem 2rem; font-size: var(--micro); color: var(--clay); }
+@media (min-width: 40rem) { .legal dl { grid-template-columns: repeat(3, 1fr); } }
+.legal dt { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.legal dd { margin-top: 0.25rem; }
+.legal .disclaimer { margin-top: 2rem; max-width: 52rem; font-size: var(--micro); color: var(--clay); }
+.legal .copy { margin-top: 1.5rem; font-size: var(--micro); color: var(--clay); }
+.pending {
+  display: inline-block; padding: 1px 6px; border: 1px dashed var(--clay-soft);
+  border-radius: 2px; font-size: var(--micro); color: var(--clay);
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────────────
+   .rise is VISIBLE by default. It only becomes transparent once JS sets the
+   flag, so a script failure renders the page normally rather than blank. */
+[data-motion="ready"] .rise {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 400ms var(--ease-rise), transform 400ms var(--ease-rise);
+}
+[data-motion="ready"] .rise[data-shown="true"] { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-motion="ready"] .rise,
+  [data-motion="ready"] .rise[data-shown="true"] { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<a class="sr-only skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell-x header-inner">
+    <a class="wordmark" href="/">
+      <svg class="mark" viewBox="0 0 120 108" xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true" focusable="false">
+        <!-- Outer chevron -->
+        <path fill="#8f2f31" d="M60 2 L117 104 L92 104 L60 46 L28 104 L3 104 Z"/>
+        <!-- Inner peak, sitting inside the chevron -->
+        <path fill="#8f2f31" d="M60 40 L86 104 L74 104 L60 72 L52 90 Z"/>
+        <!-- Leaf -->
+        <path fill="#f08a63" d="M23 104 C23 72 39 43 71 24 C56 48 50 76 48 104 Z"/>
+      </svg>
+      <span><b>Apex</b> Vitality</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main">
+      <a href="#areas">What we cover</a>
+      <a href="#price-list">Price list</a>
+      <a href="#accounts">Trade accounts</a>
+      <a href="#apply">Apply</a>
+    </nav>
+
+    <a class="btn btn-header" href="#apply">Apply for an account</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── 01 Hero ─────────────────────────────────────────────────────────── -->
+  <section class="section-y" style="padding-top:3rem">
+    <div class="shell-x">
+      <div class="editorial">
+        <div class="editorial-body">
+          <h1>Wholesale supply.</h1>
+
+          <p class="hero-sub measure">
+            We supply pharmacies worldwide, licensed wholesalers and research
+            institutions. Trade accounts are verified within seconds.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#apply">Apply for an account</a>
+          </div>
+        </div>
+
+        <div class="rail" role="note" aria-label="At a glance">
+          <p class="rail-index">01<span> / 05</span></p>
+          <p>Trade accounts only</p>
+          <p>Verified within seconds</p>
+          <p>Prices in AUD, inc. GST</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 Therapeutic areas ─────────────────────────────────────────────
+       This section describes the BUSINESS, not the products. That distinction
+       is the only reason it can exist on a public page.
+
+       s42DL prohibits advertising a therapeutic good to the public. Saying
+       "we stock across pain management" names no product, so it advertises no
+       product — the same principle that lets the page say "we supply
+       pharmacies".
+
+       WHAT WOULD BREAK IT: attaching any medicine name to any area here,
+       reordering the price list to match these headings, or putting these
+       headings above sections of the table. Each of those creates the
+       medicine-to-indication link the areas deliberately avoid, and forfeits
+       the exemption for the whole page.
+
+       Keep this section and the price list structurally separate. Do not let
+       the ordering of one imply a mapping onto the other. -->
+  <section class="rise section-y section-rule" id="areas">
+    <div class="shell-x">
+      <div class="editorial">
+        <div class="rail">
+          <p class="rail-index">02<span> / 05</span></p>
+          <p class="plain">
+            Therapeutic areas we stock across. Which product sits in which area is
+            available to verified trade accounts.
+          </p>
+        </div>
+
+        <div class="editorial-body">
+          <h2>What we cover.</h2>
+          <p class="section-intro">
+            Our range spans these therapeutic areas. We can’t say publicly which medicine
+            sits in which one — Australian law reserves that for health professionals —
+            but the full breakdown, with indications and clinical detail, opens to you
+            once your account is verified.
+          </p>
+
+          <!-- Areas only. Never attach a medicine name to one of these, and never
+               reorder the price list to match them - either change creates the
+               medicine-to-indication link this section exists to avoid. -->
+          <ul class="areas">
+            <li>Pain management</li>
+            <li>Sleep medicine</li>
+            <!-- "Hair", not "hair growth". Growth is the result of taking something,
+                 and the medicines that produce it are listed further down the same
+                 page — which makes it a claim about them. "Hair" names the area
+                 without making that claim. -->
+            <li>Hair and sexual health</li>
+            <!-- "Growth" here reads as a clinical domain, the sense used in
+                 endocrinology, rather than as a promised result. That is what keeps
+                 it on the right side of the line. "Muscle and bone growth" or
+                 "musculoskeletal growth" would not be — those describe an outcome of
+                 taking something, which is a claim about the medicines listed below
+                 and cannot appear on a public page. -->
+            <li>Musculoskeletal and growth</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Price list ────────────────────────────────────────────────────
+       Supplements are deliberately absent. Mixing non-therapeutic goods into
+       this table forfeits the price list exemption — see the header comment.
+
+       Alphabetical by active ingredient, and it must stay that way. Do not
+       group these rows under the therapeutic headings from the section above:
+       that is the specific change that converts a lawful price list into a
+       prohibited advertisement. -->
+  <section class="rise section-y section-rule" id="price-list">
+    <div class="shell-x">
+      <div class="editorial">
+        <div class="rail">
+          <p class="rail-index">03<span> / 05</span></p>
+          <p>Alphabetical by active ingredient</p>
+          <p class="plain">
+            Price information only. No product descriptions and no images —
+            both are restricted for prescription medicines.
+          </p>
+        </div>
+
+        <div class="editorial-body">
+          <h2>Price list.</h2>
+
+          <div class="notice">
+            <p>
+              <strong>Supplied to verified trade accounts only.</strong> We supply
+              pharmacies, licensed wholesalers and research institutions. We do not
+              supply the public, and nothing on this page can be purchased online.
+            </p>
+            <p>
+              This list carries price information only. It contains no statements about
+              what these medicines do, who they are for, or how they compare —
+              Australian law does not permit that to be advertised, and its absence is
+              deliberate rather than an oversight.
+            </p>
+          </div>
+        </div>
+
+        <div class="editorial-wide list-wrap">
+          <table>
+            <caption>Listed alphabetically by active ingredient. Prices in AUD, inc. GST.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Active ingredient</th>
+                <th scope="col">Strength</th>
+                <th scope="col">Dosage form</th>
+                <th scope="col">Quantity</th>
+                <th scope="col" class="num">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--
+                Alphabetical by active ingredient. Add new lines in position;
+                do not append to the end.
+
+                A published price is an offer to supply at that price, so these
+                must track what you actually charge. Update them here and
+                nowhere else — the figures appear in exactly one place on the
+                site so they cannot drift out of sync.
+
+                Every line must be an ARTG-registered good. The ARTG column was
+                removed because printing the number is not a condition of the
+                exemption, but registration itself IS. Keep the evidence on file.
+              -->
+              <tr>
+                <th scope="row">Dutasteride</th>
+                <td>0.5 mg</td>
+                <td>Soft capsule</td>
+                <td>30</td>
+                <td class="num">$40.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Finasteride</th>
+                <td>5 mg</td>
+                <td>Film-coated tablet</td>
+                <td>30</td>
+                <td class="num">$60.00</td>
+              </tr>
+              <!-- MELATONIN — CHECK BEFORE PUBLISHING.
+                   The registered Australian melatonin product is 2 mg modified-release
+                   (Pharmacist Only, over-55s). Higher strengths such as 5 mg are
+                   generally compounded or imported rather than ARTG-registered.
+                   The price list exemption covers REGISTERED goods only, so if the
+                   5 mg you stock has no ARTG entry this line cannot appear here at
+                   any price and must be removed. -->
+              <tr>
+                <th scope="row">Melatonin</th>
+                <td>5 mg</td>
+                <td>Tablet</td>
+                <td>10</td>
+                <td class="num">$30.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Minoxidil</th>
+                <td>2.5 mg</td>
+                <td>Tablet</td>
+                <td>30</td>
+                <td class="num">$25.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Pregabalin (Lyrica, Pfizer)</th>
+                <td>300 mg</td>
+                <td>Hard capsule</td>
+                <td>10</td>
+                <td class="num">$30.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Sildenafil (Viagra)</th>
+                <td>100 mg</td>
+                <td>Film-coated tablet</td>
+                <td>10</td>
+                <td class="num">$15.00</td>
+              </tr>
+              <!-- Brand and sponsor identify the specific product supplied. That is
+                   factual identification, not endorsement, and it does not carry the
+                   listing outside price information. -->
+              <tr>
+                <th scope="row">Somatropin (Genotropin GoQuick, Pfizer)</th>
+                <td>12 mg (36 IU)</td>
+                <td>Powder and solvent for injection, pre-filled pen</td>
+                <td>1 pen</td>
+                <td class="num">$400.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Tadalafil (Cialis)</th>
+                <td>20 mg</td>
+                <td>Film-coated tablet</td>
+                <td>10</td>
+                <td class="num">$70.00</td>
+              </tr>
+              <!-- SCHEDULE 8 (Controlled Drug). The price list exemption covers S8
+                   as well as S3 and S4, so this line may appear here. Supply is a
+                   different matter entirely: S8 wholesale requires a controlled-drug
+                   licence beyond a general wholesaler licence, safe storage, a drugs
+                   register, and verification of the recipient's authority to hold
+                   S8. Do not list this without holding that authority. -->
+              <tr>
+                <th scope="row">Tapentadol (immediate release)</th>
+                <td>100 mg</td>
+                <td>Tablet</td>
+                <td>10</td>
+                <td class="num">$30.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Trade accounts ────────────────────────────────────────────────── -->
+  <section class="rise section-y section-rule" id="accounts">
+    <div class="shell-x">
+      <div class="editorial">
+        <div class="rail">
+          <p class="rail-index">04<span> / 05</span></p>
+          <p>What we check, and against what</p>
+        </div>
+
+        <div class="editorial-body">
+          <h2>Trade accounts.</h2>
+          <p class="section-intro">
+            A number typed into a form is an assertion, so we check it against the
+            register that issued it before an account is opened. Applications are
+            verified within seconds.
+          </p>
+
+          <dl class="reqs">
+            <div>
+              <dt>Community and hospital pharmacy</dt>
+              <dd>
+                Pharmacy Board of Australia approval number, and the name of the
+                pharmacist in charge.
+              </dd>
+            </div>
+            <div>
+              <dt>Wholesaler</dt>
+              <dd>
+                Your wholesaler licence number and the issuing state or territory
+                authority.
+              </dd>
+            </div>
+            <div>
+              <dt>Research institution</dt>
+              <dd>
+                Institutional name, the ethics approval reference for the work, and the
+                chief investigator’s contact details.
+              </dd>
+            </div>
+          </dl>
+
+          <p class="body-note" style="font-size:var(--small)">
+            Once your account is open, ordering runs as a purchase order against it.
+            Accounts are re-verified annually and revoked immediately if a registration
+            lapses. Access and orders are logged, which is a record-keeping requirement
+            under state and territory poisons legislation rather than a preference.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Apply ─────────────────────────────────────────────────────────── -->
+  <section class="rise section-y section-rule" id="apply">
+    <div class="shell-x">
+      <div class="editorial">
+        <div class="rail" role="note" aria-label="About applying">
+          <p class="rail-index">05<span> / 05</span></p>
+          <p class="plain">
+            Submitting this form starts a verification. It does not open an account and
+            it does not grant access to anything.
+          </p>
+        </div>
+
+        <div class="editorial-body">
+          <h2>Apply for an account.</h2>
+          <p class="section-intro">
+            Leave your details and we’ll contact you to verify your registration and
+            everything else we need.
+          </p>
+
+          <!--
+            ═══════════════════════════════════════════════════════════════════
+            THE FORM — WHERE SUBMISSIONS GO
+
+            Applications post to FormSubmit, which relays them by email to
+            info@apexvitalitystore.com. A static page has no server of its own,
+            so a relay service is the only way to receive anything.
+
+            ONE-TIME ACTIVATION, REQUIRED BEFORE IT WORKS
+
+            The very first submission triggers a confirmation email to
+            info@apexvitalitystore.com containing an activation link. Click it
+            once. Until you do, submissions are held and not delivered. Send a
+            test application yourself as soon as the site is live so the link
+            arrives and you can activate it — otherwise real applications will
+            silently queue behind an unconfirmed address.
+
+            REDUCING SPAM LATER
+
+            The address is visible in this file, so scrapers will find it.
+            FormSubmit issues a hashed endpoint after activation: a random
+            string you can swap in place of the email in the action URL above,
+            which keeps the inbox out of the page source. Worth doing once the
+            site has been up a week.
+
+            ALTERNATIVES, all drop-in replacements for the action URL:
+              - Web3Forms — access key instead of the address, so the inbox is
+                never in the source. Free.
+              - Formspree — 50 submissions/month free.
+              - Basin — includes spam filtering.
+              - Netlify Forms — only if you host on Netlify, not GitHub Pages.
+
+            PRIVACY
+
+            Name, email and phone are personal information under the Privacy
+            Act 1988. FormSubmit stores and relays them, and hosts outside
+            Australia — that needs disclosing in your privacy policy before
+            this collects real applications.
+            ═══════════════════════════════════════════════════════════════════
+          -->
+          <form class="form-card" id="apply-form"
+                action="https://formsubmit.co/ajax/info@apexvitalitystore.com"
+                method="POST" novalidate>
+
+            <input type="hidden" name="_subject" value="New trade account application — Apex Vitality">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Honeypot. `_honey` is FormSubmit's own field name. Real people never
+                 fill it in; bots usually do. Hidden from sight, from screen readers
+                 and from the tab order. -->
+            <input type="text" name="_honey" style="display:none"
+                   tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required
+                     aria-describedby="name-err">
+              <p class="err" id="name-err" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required
+                     inputmode="email" aria-describedby="email-err">
+              <p class="err" id="email-err" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required
+                     inputmode="tel" aria-describedby="phone-help phone-err">
+              <p class="help" id="phone-help">Include your country code if you’re outside Australia.</p>
+              <p class="err" id="phone-err" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="enquiry">What are you looking to order?</label>
+              <!-- The format lives in the placeholder rather than a help paragraph:
+                   it shows the shape of the answer inside the box, which is clearer
+                   than describing it. The label above still names the field, so the
+                   placeholder is not carrying the accessible name. -->
+              <textarea id="enquiry" name="enquiry" rows="4" required
+                        placeholder="Medication(s) -&#10;Quantity -"
+                        aria-describedby="enquiry-err"></textarea>
+              <p class="err" id="enquiry-err" hidden></p>
+            </div>
+
+            <button class="btn" type="submit" id="apply-submit">Apply for an account</button>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+            <p class="privacy">
+              We use these details only to contact you about your application and to
+              verify your registration.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell-x" style="padding-block:3.5rem">
+    <p class="wordmark wordmark-lg">
+      <svg class="mark" viewBox="0 0 120 108" xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true" focusable="false">
+        <path fill="#8f2f31" d="M60 2 L117 104 L92 104 L60 46 L28 104 L3 104 Z"/>
+        <path fill="#8f2f31" d="M60 40 L86 104 L74 104 L60 72 L52 90 Z"/>
+        <path fill="#f08a63" d="M23 104 C23 72 39 43 71 24 C56 48 50 76 48 104 Z"/>
+      </svg>
+      <span><b>Apex</b> Vitality</span>
+    </p>
+    <p style="margin-top:0.75rem;max-width:22rem;font-size:var(--small);color:var(--clay)">
+      Wholesale supply to pharmacies worldwide, licensed wholesalers and research
+      institutions.
+    </p>
+
+    <div class="legal" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--hairline)">
+      <!-- ABN and wholesaler licence number deliberately not published. Neither
+           is required on a website and both are searchable on the public
+           registers. Note that an ABN IS required on tax invoices, and trade
+           customers commonly ask for the licence number during onboarding, so
+           have both to hand even though they are not shown here. -->
+      <dl>
+        <div>
+          <dt>Address</dt>
+          <dd>136 Marrickville Road<br>Marrickville NSW 2204<br>Australia</dd>
+        </div>
+      </dl>
+
+      <p class="disclaimer">
+        The price list on this page is published in accordance with the price
+        information provisions of the Therapeutic Goods Advertising Code. It contains no
+        therapeutic claims and is not a recommendation to use any medicine. Prescription
+        medicines are supplied only to persons and organisations lawfully entitled to
+        receive them, against a valid wholesaler licence or equivalent authorisation, and
+        supply is subject to the record-keeping requirements of the applicable state or
+        territory poisons legislation and to Therapeutic Goods Administration good
+        distribution practice. We do not supply the public. If you are unwell or think
+        you may be having a medical emergency, call 000.
+      </p>
+
+      <p class="copy">
+        © <span id="year">2026</span> Apex Vitality.
+        Prices in AUD.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://apexvitality.com.au/#organisation","name":"Apex Vitality","url":"https://apexvitality.com.au","description":"Wholesale supply of prescription medicines to pharmacies worldwide, licensed wholesalers and research institutions.","contactPoint":{"@type":"ContactPoint","contactType":"sales","areaServed":"Worldwide","availableLanguage":"en-AU"}}
+</script>
+
+<!--
+  No Product or Offer structured data anywhere on this page, and none must be
+  added. Offer schema carries price AND availability, which presents a listing
+  as a purchasable product rather than a price list — the distinction the
+  exemption turns on.
+-->
+
+<script>
+(function () {
+  'use strict';
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ── Application form ────────────────────────────────────────────────────
+     Validation is client-side only, so it is a convenience, not a control —
+     whatever endpoint receives this must validate again. Errors are announced
+     (aria-invalid plus a described-by message) rather than only coloured. */
+  var form = document.getElementById('apply-form');
+  var status = document.getElementById('form-status');
+
+  var fields = [
+    { id: 'name', message: 'Enter your name.', valid: function (v) { return v.length > 1; } },
+    {
+      id: 'email',
+      message: 'Enter an email address we can reply to.',
+      valid: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+    },
+    {
+      id: 'phone',
+      message: 'Enter a phone number we can reach you on.',
+      /* Deliberately loose: digits, spaces, +, -, (). Over-strict phone
+         validation rejects legitimate numbers far more often than it catches
+         bad ones. */
+      valid: function (v) { return /^[+()\-\s\d]{8,}$/.test(v); }
+    },
+    {
+      id: 'enquiry',
+      message: 'List what you need — name, strength and number of packs.',
+      valid: function (v) { return v.length > 3; }
+    }
+  ];
+
+  function setError(field, message) {
+    var input = document.getElementById(field.id);
+    var err = document.getElementById(field.id + '-err');
+    if (message) {
+      input.setAttribute('aria-invalid', 'true');
+      err.textContent = message;
+      err.hidden = false;
+    } else {
+      input.removeAttribute('aria-invalid');
+      err.textContent = '';
+      err.hidden = true;
+    }
+  }
+
+  var submitBtn = document.getElementById('apply-submit');
+
+  function setStatus(state, message) {
+    status.setAttribute('data-state', state);
+    status.textContent = message;
+  }
+
+  form.addEventListener('submit', function (e) {
+    var firstBad = null;
+
+    fields.forEach(function (field) {
+      var input = document.getElementById(field.id);
+      var ok = field.valid(input.value.trim());
+      setError(field, ok ? null : field.message);
+      if (!ok && !firstBad) firstBad = input;
+    });
+
+    if (firstBad) {
+      e.preventDefault();
+      status.textContent = '';
+      status.removeAttribute('data-state');
+      firstBad.focus();
+      return;
+    }
+
+    /* Submit in the background so the visitor stays on the page and gets a
+       result in place. If fetch is unavailable the handler returns without
+       preventing the default, and the plain form POST goes through instead —
+       so the form still works with a very old browser or a broken script. */
+    if (!window.fetch) return;
+
+    e.preventDefault();
+    submitBtn.disabled = true;
+    setStatus('ok', 'Sending…');
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json().catch(function () { return {}; }); })
+      .then(function (data) {
+        /* FormSubmit returns success as the string "true", not a boolean, so
+           compare loosely rather than testing truthiness on the value alone. */
+        if (data && (data.success === true || data.success === 'true')) {
+          form.reset();
+          setStatus(
+            'ok',
+            'Application received. We’ll be in touch shortly to verify your registration.'
+          );
+        } else {
+          setStatus(
+            'error',
+            'Something went wrong sending that. Please try again, or email us directly.'
+          );
+        }
+      })
+      .catch(function () {
+        setStatus(
+          'error',
+          'Couldn’t reach the server. Check your connection and try again, or email us directly.'
+        );
+      })
+      .then(function () { submitBtn.disabled = false; });
+  });
+
+  /* Clear an error as soon as the field becomes valid. */
+  fields.forEach(function (field) {
+    var input = document.getElementById(field.id);
+    input.addEventListener('input', function () {
+      if (input.getAttribute('aria-invalid') === 'true' && field.valid(input.value.trim())) {
+        setError(field, null);
+      }
+    });
+  });
+
+  /* ── Section reveal ──────────────────────────────────────────────────────
+     .rise elements are visible in CSS by default; they only become
+     transparent once the flag is set, so a script failure renders the page
+     normally rather than blank. Elements already in view are marked shown
+     before the flag goes on, so nothing flashes. */
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  var rises = [].slice.call(document.querySelectorAll('.rise'));
+  function show(el) { el.setAttribute('data-shown', 'true'); }
+  function inViewport(el) {
+    var r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+
+  rises.forEach(function (el) { if (inViewport(el)) show(el); else io.observe(el); });
+  document.documentElement.setAttribute('data-motion', 'ready');
+  setTimeout(function () { rises.forEach(show); }, 2500);
+})();
+</script>
+
+</body>
+</html>
