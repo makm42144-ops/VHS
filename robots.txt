@@ -1,0 +1,19 @@
+# Apex Vitality — https://apexvitality.com.au/
+#
+# Upload this to the SITE ROOT, not a subfolder. A robots.txt anywhere else is
+# ignored completely: crawlers only ever read /robots.txt.
+
+User-agent: *
+Allow: /
+
+# The archived earlier versions of the site referenced in the page header.
+# They are superseded and must not compete with the live page in search
+# results, nor be found by anyone reading old marketing copy.
+Disallow: /archive/
+
+# Anything behind trade account verification. The gated catalogue is not for
+# the public by design, and a crawler indexing it would undo that.
+Disallow: /account/
+Disallow: /catalogue/
+
+Sitemap: https://apexvitality.com.au/sitemap.xml

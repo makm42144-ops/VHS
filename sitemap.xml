@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Apex Vitality sitemap. Upload to the site root: https://apexvitality.com.au/sitemap.xml
+
+  One URL, because the site is one page. That is not a problem — a sitemap's
+  job is to state canonically what exists and when it last changed, and a
+  one-entry sitemap does that perfectly well.
+
+  UPDATE <lastmod> WHENEVER THE PAGE CHANGES, especially when a price changes.
+  It is the signal that prompts a recrawl. Leaving it stale after a price
+  update means search results keep showing the old figure, and a published
+  price is an offer to supply at that price.
+
+  Format is YYYY-MM-DD. Do not invent a future date to force a crawl; it is
+  ignored and it costs trust in the file.
+
+  After uploading: verify the property in Google Search Console and submit this
+  URL once. Bing Webmaster Tools imports from Search Console, so that covers both.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://apexvitality.com.au/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
